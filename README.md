@@ -1,4 +1,4 @@
-LAB1 
+LABS
 ------------------------------------------------
 Day1:
 =====
@@ -27,6 +27,10 @@ Answer "as much as you can" from the following:
 ------------------------------------------------
 Day2:
 =====
+
+Answer the following questions:
+--------------------------------
+
 1- Write a C program to check whether a given number is positive or negative or zero
 2- Write a C program to check whether a given number is even or odd
 3- C Program to Find the Largest Number Among Three Numbers
@@ -35,8 +39,7 @@ Day2:
  "Good" for 65, "Pass" for 50, "Fail" for less than 50
 5-Write a program to make a simple calculator using switch-case.
  The calculator takes the operation (+ or – or * or /) and takes the two input arguments and print the results
-------------------------------------------------
-
+ 
 ------------------------------------------
 Day3:
 =====
@@ -109,11 +112,11 @@ Answer the following questions:
 ------------------------------------------------------------------------------------------------
 Day 6:
 ======
-1) Input and Output from Array using pointers:
+1- Input and Output from Array using pointers:
   C Program that have an Array of integers, read array data from user, Ptr -> Arr, print that array using Ptr.
  (try to use "Array Notation while reading data" and "Pointer notation while printing data")
 
-2) Recursive: Power.
+2- Recursive: Power.
 ------------------------------------------------------------------------------------------------
 Day 7:
 ======
