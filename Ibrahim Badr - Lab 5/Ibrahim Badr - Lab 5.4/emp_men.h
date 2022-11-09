@@ -19,6 +19,6 @@ typedef struct Employee
 
 
 void display(Emp_Struct *dis,int i);
-void addemp (int ,Emp_Struct *, int *);
+void addemp (Emp_Struct *, int *);
 
 #endif // x

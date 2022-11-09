@@ -11,10 +11,10 @@
 
 int main()
 {
-    //9)Highlight Menu: New Colored Menu "with Arrows"
     char inp;
     char cont;
-    char chk;
+    char arro [2];
+    int chk;
     int optclr = 100;
     int lay;
     int exit=0;
@@ -31,7 +31,7 @@ int main()
     {
         inp = getch();
 
-        if (80==inp && 0==page) // Up arrow to switch layouts.
+        if (80==inp && 0==page) // Down arrow to switch layouts.
         {
             switch (lay)
             {
@@ -50,7 +50,7 @@ int main()
                 break;
             }
         }
-        else if (72==inp && 0==page) // Down arrow to switch layouts.
+        else if (72==inp && 0==page) // Up arrow to switch layouts.
         {
             switch (lay)
             {
@@ -77,19 +77,24 @@ int main()
                 chk =0;
                 for (j=0; j<size && 0==chk; j++)
                 {
-                    addemp(limit,&emp[j],&filled);
-                    printf ("Press Esc. OR Left arrow to return or any other key to continue\n");
-                    if (27==getch() || 75==getch())
+                    system("cls");
+                    addemp(&emp[j],&filled);
+                    printf ("Press Right OR Left arrow to return or any other key to continue\n");
+                    fflush (stdin);
+                    fflush (stdin);
+                    /*arro[0]=getch();
+                    arro[1]=getch();*/
+                    if (77==getchar() || 75==getchar())
                     {
-                        printf("done\n");
+                        printf("%d\n",arro);
                         chk=1;
                     }
+                    page =1;
+                    break;
+                case 1:
+                    layout1 ();
+                    page=0;
                 }
-                page =1;
-                break;
-            case 1:
-                layout1 ();
-                page=0;
             }
         }
         else if (77==inp && 2==lay) // Right arrow to switch pages at a certain layout.
@@ -97,11 +102,14 @@ int main()
             switch (page)
             {
             case 0 :
-                for (j=0; j<filled; j++)
+                if (0!=filled)
                 {
-                    display (&emp[j],j);
+                    for (j=0; j<filled; j++)
+                    {
+                        display (&emp[j],j);
+                    }
+                    page =1;
                 }
-                page =1;
                 break;
             case 1:
                 layout2 ();
@@ -117,10 +125,14 @@ int main()
                 for (j=0; j<size && 0==chk; j++)
                 {
                     system("cls");
-                    addemp(limit,&emp[j],&filled);
-                    printf ("Press Esc. OR Left arrow to return or any other key to continue\n");
-                    if (27==getch() || 75==getch())
+                    addemp(&emp[j],&filled);
+                    printf ("Press Right OR Left arrow to return or any other key to continue\n");
+                    fflush (stdin);
+                    /*arro[0]=getch();
+                    arro[1]=getch();*/
+                    if (77==getchar() || 75==getchar())
                     {
+                        printf("%d\n",arro);
                         chk=1;
                     }
                 }
@@ -136,11 +148,14 @@ int main()
             switch (page)
             {
             case 0 :
-                for (j=0; j<filled; j++)
+                if (0!=filled)
                 {
-                    display (&emp[j],j);
+                    for (j=0; j<filled; j++)
+                    {
+                        display (&emp[j],j);
+                    }
+                    page =1;
                 }
-                page =1;
                 break;
             case 1:
                 layout2 ();

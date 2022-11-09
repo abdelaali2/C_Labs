@@ -7,7 +7,7 @@
 #include "emp_men.h"
 
 
-void addemp (int limit,Emp_Struct *add, int *pt)
+void addemp (Emp_Struct *add, int *pt)
 {
     system("cls");
     SetColor (2);

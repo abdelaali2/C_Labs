@@ -5,7 +5,8 @@
 		<Project filename="Ibrahim Badr - Lab 5.2/Ibrahim Badr - Lab 5.2.cbp" />
 		<Project filename="Ibrahim Badr - Lab 5.3/Ibrahim Badr - Lab 5.3.cbp" />
 		<Project filename="Ibrahim Badr - Lab 5.4/Ibrahim Badr - Lab 5.4.cbp" />
-		<Project filename="../Ibrahim Badr - Lab 6/Ibrahim Badr - Lab 6.1/Ibrahim Badr - Lab 6.1.cbp" />
 		<Project filename="../Ibrahim Badr - Lab 7/Ibrahim Badr - Lab 7.1/Ibrahim Badr - Lab 7.1.cbp" />
+		<Project filename="../Ibrahim Badr - Lab 4/Ibrahim Badr - Lab 4.3/Ibrahim Badr - Lab 4.3.cbp" />
+		<Project filename="../../test/tets/tets.cbp" />
 	</Workspace>
 </CodeBlocks_workspace_file>
