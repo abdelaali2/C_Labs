@@ -32,11 +32,15 @@ Answer the following questions:
 --------------------------------
 
 1- Write a C program to check whether a given number is positive or negative or zero
+
 2- Write a C program to check whether a given number is even or odd
+
 3- C Program to Find the Largest Number Among Three Numbers
+
 4- Write a program that reads a student grade percentage and prints 
 "Excellent" if his grade is greater than or equal 85, "Very Good" for 75 or greater;
  "Good" for 65, "Pass" for 50, "Fail" for less than 50
+
 5-Write a program to make a simple calculator using switch-case.
  The calculator takes the operation (+ or – or * or /) and takes the two input arguments and print the results
  
@@ -74,23 +78,23 @@ Day 4:
 
 Answer the following questions:
 --------------------------------
-1) C Program to swap 2 integer values. (Swap function, calling by address)
+1- C Program to swap 2 integer values. (Swap function, calling by address)
 
-1) Receive character by character and then place the string terminator upon pressing enter, then display the string.
+2- Receive character by character and then place the string terminator upon pressing enter, then display the string.
 
-2) C Program to take char and displays if it is "Normal or Extended key" along with its Ascii value.
+3- C Program to take char and displays if it is "Normal or Extended key" along with its Ascii value.
 
-3) C Program to take firstName and lastName from user, then displays fullName.
+4- C Program to take firstName and lastName from user, then displays fullName.
 
-4) C Program to Find the Frequency of Characters in a String
+5- C Program to Find the Frequency of Characters in a String
 
-5) C Program to Copy String Without Using strcpy()
+6- C Program to Copy String Without Using strcpy()
 
-6) C Program to Find the Length of a String without Using strlen()
+7- C Program to Find the Length of a String without Using strlen()
 
-9) C Program to Remove all Characters in a String Except Alphabet
+8- C Program to Remove all Characters in a String Except Alphabet
 
-10) Highlight Menu: New Colored Menu "with Arrows"
+9- Highlight Menu: New Colored Menu "with Arrows"
 ------------------------------------------------------------------------------------------------
 
 Day 5:
