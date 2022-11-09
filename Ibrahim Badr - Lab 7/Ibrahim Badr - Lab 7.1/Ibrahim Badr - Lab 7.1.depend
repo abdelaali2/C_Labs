@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1667832311 source:m:\private iti\iot labs - ibrahim badreldin\c programming\labs\ibrahim badr - lab 7\ibrahim badr - lab 7.1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<dos.h>
+	<dir.h>
+	"mylibrary.h"
+
+1667822804 source:m:\private iti\iot labs - ibrahim badreldin\c programming\labs\ibrahim badr - lab 7\ibrahim badr - lab 7.1\mylibrary.c
+	"mylibrary.h"
+
+1668026597 m:\private iti\iot labs - ibrahim badreldin\c programming\labs\ibrahim badr - lab 7\ibrahim badr - lab 7.1\mylibrary.h
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<dos.h>
+	<dir.h>
+	<windows.h>
+

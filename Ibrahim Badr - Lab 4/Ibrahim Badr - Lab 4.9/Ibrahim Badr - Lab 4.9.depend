@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1667588969 source:m:\private iti\iot labs - ibrahim badreldin\c programming\labs\ibrahim badr - lab 4\ibrahim badr - lab 4.9\main.c
+	<stdio.h>
+	<stdlib.h>
+	<dos.h>
+	<dir.h>
+	<windows.h>
+	<time.h>
+
