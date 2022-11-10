@@ -7,7 +7,7 @@
 int main()
 {
     char in[size];
-    int i;
+    int i=0;
     int index=0;
     int exit=0;
     int filled=0;
@@ -17,42 +17,39 @@ int main()
     }
     in[size]='\0';
     clrscr();
-    //gotoxy (2,20);
     clrscr();
     textattr (95);
     SetColor(15);
     gotoxy (40,8);
     printf("%s",in);
+    gotoxy (40,8);
     do
     {
-        /*
-           char ch = getch();
-    if (ch == -32)
-    {
-        printf ("Extended Key : ");
-        ch = getch();
-        printf ("%d\n",ch);
-    }
-    else
-    {
-        printf ("Normal Key : ");
-        printf ("%d\n",ch);
-    }
-        */
-        gotoxy (40+2*index,8);
         for (i=0; i<size; i++)
         {
-            if(75==getche())
+            gotoxy (40+i,8);
+            in[i]=getch();
+            if(left==in[i]&&(0==i))
             {
-                index--;
-                gotoxy (40+2*index,8);
+                //index--;
+                gotoxy (40+size,8);
+                i=size;
             }
-            else if(8==getche())
+            else if(left==in[i]&&(0!=i))
+            {
+                i--;
+                gotoxy (40+i,8);
+            }
+            else if(back==in[i])
             {
                 //in[i]=getche();
                 //del();
-                index--;
-                filled++;
+                i--;
+                //filled++;
+            }
+            else
+            {
+                printf("%c",in[i]);
             }
 
         }

@@ -39,18 +39,14 @@ int main()
     //9)Highlight Menu: New Colored Menu "with Arrows"
     char inp;
     char cont;
-    int optclr = 100;
     int lay;
     int page;
     int exit=0;
-    //do
-    //{
     layout1 ();
     lay=1;
     page=0;
     do
     {
-
         inp = getch();
 
         if (80==inp && 0==page)
@@ -91,7 +87,7 @@ int main()
                 break;
             }
         }
-        else if (77==inp && 1==lay)
+        else if ((77==inp || 75==inp) && 1==lay)
         {
             switch (page)
             {
@@ -103,41 +99,17 @@ int main()
                 layout1 ();
                 page=0;
             }
-        } else if (77==inp && 2==lay)
+        } else if ((77==inp || 75==inp) && 2==lay)
         {
             switch (page)
             {
             case 0 :
                 exp();
-                page =1;
+                page=1; //current state is at page 1
                 break;
             case 1:
                 layout2 ();
-                page=0;
-            }
-        } else if (75==inp && 1==lay)
-        {
-            switch (page)
-            {
-            case 0 :
-                contact ();
-                page=1;
-                break;
-            case 1:
-                layout1 ();
-                page=0;
-            }
-        } else if (75==inp && 2==lay)
-        {
-            switch (page)
-            {
-            case 0 :
-                exp();
-                page =1;
-                break;
-            case 1:
-                layout2 ();
-                page=0;
+                page=0; //current state is at page 0
             }
         } else if (3==lay && (77==inp || 75==inp))
         {
