@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1668260442 source:m:\private iti\iot labs - ibrahim badreldin\c programming\labs\ibrahim badr - lab 8\ibrahim badr - lab 8.2\func.c
+	"head.h"
+
+1668255946 m:\private iti\iot labs - ibrahim badreldin\c programming\labs\ibrahim badr - lab 8\ibrahim badr - lab 8.2\head.h
+	<stdio.h>
+	<stdlib.h>
+	<dos.h>
+	<dir.h>
+	<windows.h>
+	<time.h>
+
+1668259389 source:m:\private iti\iot labs - ibrahim badreldin\c programming\labs\ibrahim badr - lab 8\ibrahim badr - lab 8.2\main.c
+	"head.h"
+
