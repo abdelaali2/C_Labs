@@ -25,7 +25,7 @@ void ext_nav (char *l, int *n)
     }
 }
 
-/*
+/*h
 void push (char * l,int * n)
 {
     int c;

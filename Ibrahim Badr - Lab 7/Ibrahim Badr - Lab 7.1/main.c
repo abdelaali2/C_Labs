@@ -8,11 +8,9 @@ int main()
 {
     char in [size+1] ={0};
     char x;
-    int i=0,p=0;
-    int num=0,last=0;
-    int index=0;
+    int i=0,p=0,moved=0;
+    int num=0;
     int exit=0;
-    int filled=0;
     for (p=0; p<size; p++) // this will determine the area in which the user will type.
     {
         in[p]=' ';
@@ -39,6 +37,19 @@ int main()
             exit=1;
             in[i]='\0';
         }
+        else if (8==x)
+        {
+            if (0<=i && size>=i)
+            {
+            putch('\b');
+            putch(' ');
+            num--;
+            i--;
+            gotoxy (20+i,8);
+            in[i]=putch('\b');
+           }
+
+        }
         else
         {
             if(0<=i && size>=i && -32!=i)
@@ -47,7 +58,6 @@ int main()
                 printf("%c",in[i]);
                 i++;
                 num++;
-                last++;
             }
         }
     textattr (1);
