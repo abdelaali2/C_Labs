@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1668037613 source:m:\private iti\iot labs - ibrahim badreldin\c programming\labs\ibrahim badr - lab 5\ibrahim badr - lab 5.4\main.c
+1668251207 source:m:\private iti\iot labs - ibrahim badreldin\c programming\labs\ibrahim badr - lab 5\ibrahim badr - lab 5.4\main.c
 	<stdio.h>
 	<stdlib.h>
 	<dos.h>
@@ -24,7 +24,7 @@
 	<windows.h>
 	<time.h>
 
-1668037003 source:m:\private iti\iot labs - ibrahim badreldin\c programming\labs\ibrahim badr - lab 5\ibrahim badr - lab 5.4\employee_operations.c
+1668249730 source:m:\private iti\iot labs - ibrahim badreldin\c programming\labs\ibrahim badr - lab 5\ibrahim badr - lab 5.4\employee_operations.c
 	<stdio.h>
 	<stdlib.h>
 	<dos.h>
@@ -33,5 +33,11 @@
 	<time.h>
 	"emp_men.h"
 
-1668037003 m:\private iti\iot labs - ibrahim badreldin\c programming\labs\ibrahim badr - lab 5\ibrahim badr - lab 5.4\emp_men.h
+1668211232 m:\private iti\iot labs - ibrahim badreldin\c programming\labs\ibrahim badr - lab 5\ibrahim badr - lab 5.4\emp_men.h
+	<stdio.h>
+	<stdlib.h>
+	<dos.h>
+	<dir.h>
+	<windows.h>
+	<time.h>
 

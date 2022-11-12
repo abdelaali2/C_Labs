@@ -2,6 +2,15 @@
 #ifndef  x
 #define X
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <dos.h>
+#include <dir.h>
+#include <windows.h>
+#include <time.h>
+//#define size 100
+
+void gotoxy(int,int);
 void SetColor(int);
 void layout1 (void);
 void layout2 (void);
@@ -18,7 +27,7 @@ typedef struct Employee
 } Emp_Struct;
 
 
-void display(Emp_Struct *dis,int i);
+void display(Emp_Struct *,int );
 void addemp (Emp_Struct *, int *);
 
 #endif // x

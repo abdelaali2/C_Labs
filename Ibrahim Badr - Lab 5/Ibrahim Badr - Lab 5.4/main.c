@@ -12,17 +12,13 @@
 int main()
 {
     char inp;
-    char cont;
-    char arro [2];
     int chk;
-    int optclr = 100;
     int lay;
     int exit=0;
     int filled=0;
     int page=0;
     int j=0;
-    int limit = size;
-    Emp_Struct emp[size] = {0,0,0,0,0,'0'};
+    Emp_Struct emp[size];
 
     layout1 ();
     lay=1;
@@ -69,7 +65,7 @@ int main()
                 break;
             }
         }
-        else if (77==inp && 1==lay) // Right arrow to switch pages at a certain layout.
+        else if ((77==inp || 75==inp) && 1==lay) // Right or Left arrow to switch pages at a certain layout.
         {
             switch (page)
             {
@@ -79,15 +75,17 @@ int main()
                 {
                     system("cls");
                     addemp(&emp[j],&filled);
-                    printf ("Press Right OR Left arrow to return or any other key to continue\n");
-                    fflush (stdin);
-                    fflush (stdin);
-                    /*arro[0]=getch();
-                    arro[1]=getch();*/
-                    if (77==getchar() || 75==getchar())
+                    printf ("Press Left arrow to return or any other key to continue\n");
+                    char x = getch();
+                    if (x == 0 || x == 224)
                     {
-                        printf("%d\n",arro);
-                        chk=1;
+                        getch();
+                        x=getch();
+                        if (75== x || 77== x)
+                        {
+
+                            chk=1;
+                        }
                     }
                     page =1;
                     break;
@@ -97,53 +95,8 @@ int main()
                 }
             }
         }
-        else if (77==inp && 2==lay) // Right arrow to switch pages at a certain layout.
-        {
-            switch (page)
-            {
-            case 0 :
-                if (0!=filled)
-                {
-                    for (j=0; j<filled; j++)
-                    {
-                        display (&emp[j],j);
-                    }
-                    page =1;
-                }
-                break;
-            case 1:
-                layout2 ();
-                page=0;
-            }
-        }
-        else if (75==inp && 1==lay) // Left arrow to switch pages at a certain layout.
-        {
-            switch (page)
-            {
-            case 0 :
-                chk =0;
-                for (j=0; j<size && 0==chk; j++)
-                {
-                    system("cls");
-                    addemp(&emp[j],&filled);
-                    printf ("Press Right OR Left arrow to return or any other key to continue\n");
-                    fflush (stdin);
-                    /*arro[0]=getch();
-                    arro[1]=getch();*/
-                    if (77==getchar() || 75==getchar())
-                    {
-                        printf("%d\n",arro);
-                        chk=1;
-                    }
-                }
-                page=1;
-                break;
-            case 1:
-                layout1 ();
-                page=0;
-            }
-        }
-        else if (75==inp && 2==lay) // Left arrow to switch pages at a certain layout.
+
+        else if ((77==inp || 75==inp) && 2==lay)   // Right & Left arrow to switch pages at a certain layout.
         {
             switch (page)
             {

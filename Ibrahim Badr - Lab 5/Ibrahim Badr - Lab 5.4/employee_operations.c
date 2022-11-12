@@ -24,6 +24,7 @@ void addemp (Emp_Struct *add, int *pt)
     scanf ("%d", &add->deduction);
     add->net = add->salary + add->bonus - add->deduction;
     (*pt)++;
+    fflush (stdin);
     SetColor (15);
 }
 

@@ -6,55 +6,66 @@
 
 int main()
 {
-    char in[size];
-    int i=0;
+    char in [size+1] ={0};
+    char x;
+    int i=0,p=0;
+    int num=0,last=0;
     int index=0;
     int exit=0;
     int filled=0;
-    for (i=0; i<size; i++)
+    for (p=0; p<size; p++) // this will determine the area in which the user will type.
     {
-        in[i]=' ';
+        in[p]=' ';
     }
-    in[size]='\0';
+    in[size+1]='\0';
     clrscr();
-    clrscr();
-    textattr (95);
+    textattr (22);
     SetColor(15);
-    gotoxy (40,8);
+    gotoxy (20,8);
     printf("%s",in);
-    gotoxy (40,8);
     do
     {
-        for (i=0; i<size; i++)
+        textattr (22);
+        SetColor(15);
+        gotoxy (20+i,8);
+        x=getch();
+         if (-32==x)
         {
-            gotoxy (40+i,8);
-            in[i]=getch();
-            if(left==in[i]&&(0==i))
-            {
-                //index--;
-                gotoxy (40+size,8);
-                i=size;
-            }
-            else if(left==in[i]&&(0!=i))
-            {
-                i--;
-                gotoxy (40+i,8);
-            }
-            else if(back==in[i])
-            {
-                //in[i]=getche();
-                //del();
-                i--;
-                //filled++;
-            }
-            else
-            {
-                printf("%c",in[i]);
-            }
-
+            x=getch();
+            ext_nav(&x,&i);
         }
+        else if(13==x)
+        {
+            exit=1;
+            in[i]='\0';
+        }
+        else
+        {
+            if(0<=i && size>=i && -32!=i)
+            {
+                in[i]=x;
+                printf("%c",in[i]);
+                i++;
+                num++;
+                last++;
+            }
+        }
+    textattr (1);
+    SetColor(15);
+    gotoxy (60,18);
+    printf("No. of char =%d\n",num);
     }
     while (0==exit);
+    textattr (255);
+    SetColor(245);
+    for (p=0; '\0'!=in[p]; p++)
+    {
+        gotoxy (20+p,15);
+        printf("%c",in[p]);
+    }
+    printf ("\n\n\n\n");
+    textattr (1);
+    SetColor(15);
 
     return 0;
 }
