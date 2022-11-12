@@ -77,9 +77,8 @@ int main()
                     addemp(&emp[j],&filled);
                     printf ("Press Left arrow to return or any other key to continue\n");
                     char x = getch();
-                    if (x == 0 || x == 224)
+                    if (-32== x)
                     {
-                        getch();
                         x=getch();
                         if (75== x || 77== x)
                         {
@@ -92,6 +91,7 @@ int main()
                 case 1:
                     layout1 ();
                     page=0;
+                    break;
                 }
             }
         }
@@ -113,6 +113,7 @@ int main()
             case 1:
                 layout2 ();
                 page=0;
+                break;
             }
         }
         else if (3==lay && (77==inp || 75==inp)) // Right or Left arrows to exit.

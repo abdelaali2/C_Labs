@@ -5,18 +5,14 @@
 int main()
 {
     char inp;
-    char cont;
-    char arro [2];
     int chk;
-    int optclr = 100;
     int lay;
     int exit=0;
     int filled=0;
     int page=0;
     int j=0;
-    int limit = size;
-    Emp_Struct emp[size] = {0,0,0,0,0,'0'};
-
+    int size = layout0();
+    Emp_Struct *emp;
     layout1 ();
     lay=1;
     page=0;
@@ -62,98 +58,55 @@ int main()
                 break;
             }
         }
-        else if (77==inp && 1==lay) // Right arrow to switch pages at a certain layout.
+        else if ((77==inp || 75==inp) && 1==lay) // Right or left arrow to switch pages at a certain layout.
         {
-            switch (page)
+            page=0;
+            chk =0;
+            for (j=0; j<size && 0==chk; j++)
             {
-            case 0 :
-                chk =0;
-                for (j=0; j<size && 0==chk; j++)
+                system("cls");
+                emp = addemp(&size,&filled);
+                printf ("aft:  %d\n",emp->id);
+                printf ("Press c to continue\n");
+                fflush(stdin);
+                char x= getch();
+                printf("%d",x);
+                if (99!=(int)x)
                 {
-                    system("cls");
-                    addemp(&emp[j],&filled);
-                    printf ("Press Left arrow to return or any other key to continue\n");
-                    fflush (stdin);
-                    char x = getch();
-                    if (75==(int) x)
-                    {
-                        chk=1;
-                    }
-                    page =1;
-                    break;
-                case 1:
-                    layout1 ();
-                    page=0;
+                    chk=1;
+
                 }
+
             }
+            page=0;
+            printf ("we should go to layout 1\n");
+            layout1 ();
+            lay=1;
+
         }
-        else if (77==inp && 2==lay) // Right arrow to switch pages at a certain layout.
+
+        else if ((75==inp || 77==inp) && 2==lay) // Left or Right arrow to switch pages at a certain layout.
         {
             switch (page)
             {
             case 0 :
-                if (0!=filled)
+                if (0!=filled) // if there is no data stored then there'll be nothing to display
                 {
-                    for (j=0; j<filled; j++)
-                    {
-                        display (&emp[j],j);
-                    }
-                    page =1;
-                }
-                break;
-            case 1:
-                layout2 ();
-                page=0;
-            }
-        }
-        else if (75==inp && 1==lay) // Left arrow to switch pages at a certain layout.
-        {
-            switch (page)
-            {
-            case 0 :
-                chk =0;
-                for (j=0; j<size && 0==chk; j++)
-                {
-                    system("cls");
-                    addemp(&emp[j],&filled);
-                    printf ("Press Left arrow to return or any other key to continue\n");
-                    fflush (stdin);
-                    char x = getch();
-                    if (75==(int) x)
-                    {
-                        chk=1;
-                    }
-                }
-                page=1;
-                break;
-            case 1:
-                layout1 ();
-                page=0;
-            }
-        }
-        else if (75==inp && 2==lay) // Left arrow to switch pages at a certain layout.
-        {
-            switch (page)
-            {
-            case 0 :
-                if (0!=filled)
-                {
-                    for (j=0; j<filled; j++)
-                    {
-                        display (&emp[j],j);
-                    }
+                    display (emp, &filled);
                     page =1;
                 }
                 break;
             case 1:
                 layout2 ();
                 page=0;
+                break;
             }
         }
         else if (3==lay && (77==inp || 75==inp)) // Right or Left arrows to exit.
         {
             exit=1;
         }
+
     }
     while (0==exit);
     return 0;
