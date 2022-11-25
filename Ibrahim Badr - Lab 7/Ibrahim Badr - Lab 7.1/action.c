@@ -1,42 +1,40 @@
 #include "mylibrary.h"
 
 
-void ext_nav (char *l, int *n)
+void ext_nav (char *l, int *i)
 {
-    if(left==*l && (0!=*n))
+    if(left==*l && (0!=*i))
     {
-        (*n)-=2; // return 2 steps from the current location of the cursor to the previous char.
-        gotoxy (20+(*n),8);
+        (*i)--;
+        gotoxy (20+(*i),8);
     }
-    else if (right==*l && (size!=*n))
+    else if (right==*l && (size!=*i))
     {
-        (*n)++;
-        gotoxy (20+(*n),8);
+        (*i)++;
+        gotoxy (20+(*i),8);
     }
     else if (home==*l)
     {
-        (*n)=0;
-        gotoxy (20+(*n),8);
+        (*i)=0;
+        gotoxy (20+(*i),8);
     }
     else if (en==*l)
     {
-        (*n)=size;
-        gotoxy (20+(*n),8);
+        (*i)=size;
+        gotoxy (20+(*i),8);
     }
 }
 
-/*h
-void push (char * l,int * n)
-{
-    int c;
-    for (c=size;c>(*l);c--)
-    {
 
-    }
+
+void back_space (char *inp, int *i, int *num)
+{
+    printf("%c   %d    %d   \n",*inp,*i,*num);
+    *inp=putch(' ');
+    (*num)--;
+    (*i)--;
 }
 
-void pull (char * l,int * n)
-{
 
-}
-*/
+
+

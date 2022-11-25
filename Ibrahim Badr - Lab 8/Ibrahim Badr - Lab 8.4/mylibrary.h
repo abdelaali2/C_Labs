@@ -12,17 +12,16 @@
 #define down 80
 #define up 72
 #define home 71
-#define en 79
 #define enter 13
+#define en 79
 #define back 8
 
 
 void SetColor(int ForgC);
 void textattr(int ForgC);
-void clrscr  (void);
-void gotoxy  (int x, int y);
+void clrscr(void);
+void gotoxy(int x, int y);
 void ext_nav (char *, int *);
-void back_space (char *, int *, int *);
 
 
 #endif // MYLIBRARY

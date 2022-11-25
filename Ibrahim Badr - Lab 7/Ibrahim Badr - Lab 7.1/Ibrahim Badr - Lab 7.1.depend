@@ -15,3 +15,19 @@
 1668284167 source:m:\private iti\iot labs - ibrahim badreldin\c programming\labs\ibrahim badr - lab 7\ibrahim badr - lab 7.1\action.c
 	"mylibrary.h"
 
+1668719463 source:m:\private iti\labs\c programming\labs\ibrahim badr - lab 7\ibrahim badr - lab 7.1\action.c
+	"mylibrary.h"
+
+1668719255 m:\private iti\labs\c programming\labs\ibrahim badr - lab 7\ibrahim badr - lab 7.1\mylibrary.h
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<dos.h>
+	<dir.h>
+
+1667822804 source:m:\private iti\labs\c programming\labs\ibrahim badr - lab 7\ibrahim badr - lab 7.1\mylibrary.c
+	"mylibrary.h"
+
+1668754833 source:m:\private iti\labs\c programming\labs\ibrahim badr - lab 7\ibrahim badr - lab 7.1\main.c
+	"mylibrary.h"
+

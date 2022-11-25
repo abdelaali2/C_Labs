@@ -6,7 +6,7 @@
 
 int main()
 {
-    char in [size+1] ={0};
+    char in [size+1] = {0};
     char x;
     int i=0,p=0,moved=0;
     int num=0;
@@ -15,7 +15,7 @@ int main()
     {
         in[p]=' ';
     }
-    in[size+1]='\0';
+    in[size+1]='\0';//adding the terminator
     clrscr();
     textattr (22);
     SetColor(15);
@@ -27,7 +27,7 @@ int main()
         SetColor(15);
         gotoxy (20+i,8);
         x=getch();
-         if (-32==x)
+        if (-32==x)
         {
             x=getch();
             ext_nav(&x,&i);
@@ -35,19 +35,30 @@ int main()
         else if(13==x)
         {
             exit=1;
-            in[i]='\0';
+            in[moved]='\0';
         }
         else if (8==x)
         {
-            if (0<=i && size>=i)
+            if (0<i && size>=i /*&& i<num*/)
             {
-            putch('\b');
-            putch(' ');
-            num--;
-            i--;
-            gotoxy (20+i,8);
-            in[i]=putch('\b');
-           }
+                //back_space(&in[i],&i,&num);
+                //p=i;
+                putch('\b');
+                putch(' ');
+                i--;
+                in[i]=putch('\b');
+                num--;
+                /*for ()
+                {
+
+                }*/
+            }
+            else if (0==i)
+            {
+                in[i]=putch(' ');
+
+            }
+
 
         }
         else
@@ -58,12 +69,14 @@ int main()
                 printf("%c",in[i]);
                 i++;
                 num++;
+                moved++;
+
             }
         }
-    textattr (1);
-    SetColor(15);
-    gotoxy (60,18);
-    printf("No. of char =%d\n",num);
+        textattr (1);
+        SetColor(15);
+        gotoxy (60,18);
+        printf("No. of char =%d\t%d\t%d\n",num,i,moved);
     }
     while (0==exit);
     textattr (255);
